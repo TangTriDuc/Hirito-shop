@@ -10,7 +10,6 @@ import imgFig3 from '../images/imageFig3'
 import imgFig6 from'../images/imageFig6'
 import imgFig7 from '../images/imageFig7'
 import imgFig8 from '../images/imageFig8'
-// import imgHP from '../images/imageHP'
 import {  FaPlane, FaParachuteBox, FaPaypal } from 'react-icons/fa';
 import Sdata from './Sdata'
 import "slick-carousel/slick/slick.css"; 
@@ -25,13 +24,11 @@ const HomePage = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
-  
-        /*Tạo thanh kiểu dấu chấm */
-        appendDots: (dots) => {
-          return <ul style={{margin: "0px"}}>{dots}</ul>
-        }
-      }
+        autoplay: true,
+
+        //Chỉnh tốc độ chạy autoplay
+        autoplaySpeed: 1000,
+}
 
     return (  
 
@@ -98,10 +95,10 @@ const HomePage = () => {
 
                    <div className='name-desc'>
                         <div className='name-fig'>Pre-Order Figure</div>
-                        <div className='name-'>Products that have been or are about to be released and need to be pre-ordered</div>      
+                        <div className='name'>Products that have been or are about to be released and need to be pre-ordered</div>      
                     </div>
 
-                    <div className='Pre-order'>
+                     <div className='Pre-order'>
                     
                     
                     <div className='present-fig'>
@@ -197,7 +194,7 @@ const HomePage = () => {
 
                  <div className='name-desc'>
                  <div className='name-fig'>Available Figure</div>
-                        <div className='name-'>The product is in stock, you can buy it now</div>
+                        <div className='name'>The product is in stock, you can buy it now</div>
                  </div>
                 
                  <div className='Pre-order'>
